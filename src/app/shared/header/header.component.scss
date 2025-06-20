@@ -1,0 +1,103 @@
+@use '../../../styles/index.scss' as *;
+
+.header {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+
+    .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--color-primary);
+
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .nav {
+        display: flex;
+        gap: 1.5rem;
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+
+        .btn {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+
+            &:hover {
+                background-color: var(--color-primary-dark);
+            }
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+
+            &:hover {
+                background-color: rgba(99, 102, 241, 0.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+        color: var(--color-primary);
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}
