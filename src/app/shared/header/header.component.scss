@@ -2,11 +2,13 @@
 
 .header {
     background-color: var(--color-bg);
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
 
     .container {
         max-width: var(--container-width);
@@ -15,33 +17,52 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-weight: 700;
-        font-size: 1.25rem;
-        color: var(--color-primary);
+        margin-right: 2rem;
 
-        .logo-icon {
-            font-size: 1.5rem;
+        img {
+            height: 40px;
+            width: auto;
+            display: block;
         }
     }
 
     .nav {
         display: flex;
-        gap: 1.5rem;
+        gap: 2.5rem;
 
         .nav-link {
-            text-decoration: none;
+            font-size: 1rem;
             color: var(--color-text);
             font-weight: 500;
-            transition: color 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: var(--color-primary);
+                transition: width 0.3s ease;
+            }
 
             &:hover {
                 color: var(--color-primary);
+
+                &::after {
+                    width: 100%;
+                }
             }
         }
 
@@ -52,16 +73,17 @@
 
     .actions {
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
+        margin-left: 2rem;
 
         .btn {
-            padding: 0.5rem 1.25rem;
-            font-size: 0.9rem;
-            border-radius: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 0.6rem;
             border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .btn-primary {
@@ -79,7 +101,7 @@
             border: 2px solid var(--color-primary);
 
             &:hover {
-                background-color: rgba(99, 102, 241, 0.1);
+                background-color: rgba(99, 102, 241, 0.08);
             }
         }
 
@@ -90,14 +112,34 @@
 
     .menu-toggle {
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
         background: none;
-        font-size: 1.5rem;
         border: none;
         cursor: pointer;
-        color: var(--color-primary);
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
 
         @media (max-width: 768px) {
-            display: block;
+            display: flex;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
         }
     }
 }

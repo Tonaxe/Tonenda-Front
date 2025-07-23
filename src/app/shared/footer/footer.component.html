@@ -1,1 +1,53 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="footer-content">
+        <section class="footer-column footer-brand">
+            <img src="/assets/logoText.png" alt="Tonenda - Plataforma para gestión de servicios" loading="lazy"
+                width="200" height="36" />
+            <p>
+                La solución completa para negocios de servicios presenciales.<br />
+                Gestión sencilla, sin complicaciones.
+            </p>
+            <div class="social-icons" aria-label="Redes sociales">
+                <a href="https://linkedin.com" aria-label="LinkedIn de Tonenda" rel="noopener noreferrer"
+                    target="_blank">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com" aria-label="Instagram de Tonenda" rel="noopener noreferrer"
+                    target="_blank">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <nav class="footer-column" aria-labelledby="footer-links">
+            <h2 id="footer-links">Enlaces</h2>
+            <ul>
+                <li><a routerLink="/caracteristicas">Características</a></li>
+                <li><a routerLink="/como-funciona">Cómo funciona</a></li>
+                <li><a routerLink="/faq">Preguntas frecuentes</a></li>
+                <li><a routerLink="/precios">Precios</a></li>
+            </ul>
+        </nav>
+
+        <nav class="footer-column" aria-labelledby="footer-legal">
+            <h2 id="footer-legal">Legal</h2>
+            <ul>
+                <li><a routerLink="/privacidad">Política de privacidad</a></li>
+                <li><a routerLink="/terminos">Términos y condiciones</a></li>
+                <li><a routerLink="/cookies">Política de cookies</a></li>
+            </ul>
+        </nav>
+
+        <section class="footer-column" aria-labelledby="footer-contacto">
+            <h2 id="footer-contacto">Contacto</h2>
+            <ul class="contact-info">
+                <li><strong>Email:</strong> <a href="mailto:soporte&#64;tonenda.com">soporte&#64;tonenda.com</a></li>
+                <li><strong>Teléfono:</strong> <a href="tel:+34600123456">+34 600 123 456</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; {{ year }} <strong>Tonenda</strong>. Todos los derechos reservados.</p>
+    </div>
+</footer>

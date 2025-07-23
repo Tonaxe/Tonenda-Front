@@ -1,24 +1,28 @@
-<header class="header">
+<header class="header" role="banner">
     <div class="container">
         <div class="logo">
-            <span class="logo-icon">✔</span>
-            <span class="logo-text">Tonenda</span>
+            <a routerLink="/" aria-label="Ir al inicio de Tonenda">
+                <img src="/assets/logoText.png" alt="Tonenda - Plataforma de reservas y gestión de servicios"
+                    loading="eager" width="160" height="40" />
+            </a>
         </div>
 
-        <nav class="nav">
-            <a href="#" class="nav-link">Inicio</a>
-            <a href="#" class="nav-link">Características</a>
-            <a href="#" class="nav-link">Precios</a>
-            <a href="#" class="nav-link">Contacto</a>
+        <nav class="nav" role="navigation" aria-label="Menú principal">
+            <a routerLink="/" class="nav-link">Inicio</a>
+            <a routerLink="/caracteristicas" class="nav-link">Características</a>
+            <a routerLink="/precios" class="nav-link">Precios</a>
+            <a routerLink="/contacto" class="nav-link">Contacto</a>
         </nav>
 
-        <div class="actions">
-            <button class="btn btn-secondary">Iniciar sesión</button>
-            <button class="btn btn-primary">Empieza gratis</button>
+        <div class="actions" aria-label="Acciones de usuario">
+            <button class="btn btn-secondary" type="button">Iniciar sesión</button>
+            <button class="btn btn-primary" type="button">Empieza gratis</button>
         </div>
 
-        <button class="menu-toggle" aria-label="Abrir menú">
-            ☰
+        <button class="menu-toggle" aria-label="Abrir menú móvil" type="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </button>
     </div>
 </header>
